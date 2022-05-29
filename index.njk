@@ -1,0 +1,43 @@
+---
+title: Blog
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.posts
+  size: 5
+  alias: posts
+---
+
+<ul>
+
+    {% for post in posts %}
+        <div class="outer">
+            <div class="container">
+                <div class="box">
+                    <strong>
+                        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    </strong>
+                    <br>
+                    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                    <br>
+                    <span>
+                        {{ post.data.description }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</ul>
+
+<nav>
+  <ol class="inline-li">
+    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">⟨</a>{% else %}⟨{% endif %}</li>
+{%- for pageEntry in pagination.pages %}
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+{%- endfor %}
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">⟩</a>{% else %}⟩{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">⟫</a>{% else %}⟫{% endif %}</li>
+  </ol>
+</nav>
