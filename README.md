@@ -1,6 +1,8 @@
 # 11ty-blog
-A very vanilla starter blog using 11ty with Netlify CMS
+A very vanilla 11ty starter for a static blog site with paginated posts and integration with Netlify CMS.
 
-This is a template for an 11ty static blog site, with paginated posts and integrated with Netlify CMS
+# Demo
+
+[11ty-blog-vanilla.netlify.app](https://11ty-blog-vanilla.netlify.app)
 
 # Install
