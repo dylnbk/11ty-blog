@@ -42,24 +42,27 @@ ol li {
 .post-date {
     display: grid;
     place-content: center;
-    margin-bottom: 5vh; 
+    margin: 2vh; 
+    font-size: medium;
 }
 
 .post-content {
     display: grid;
     place-content: center;
     margin: 5vh 0;
+    font-size: large;
 }
 
 .box {
-    margin: 10px 0;
+    margin: 2vh 0;
     padding: 5px;
     border: 1px solid black;
+    text-align: center;
 }
   
 .container {
-    max-width: 45rem;
-    min-width: 45rem;
+    max-width: 35rem;
+    min-width: 35rem;
 }
   
 .outer {
@@ -71,7 +74,7 @@ ol li {
 nav {
     display: grid;
     place-content: center;
-    margin: 10px 0;
+    margin: 5vh 0;
 }
 
 .featured-image {

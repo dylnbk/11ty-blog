@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addWatchTarget("css");
+    eleventyConfig.addPassthroughCopy("fonts");
+    eleventyConfig.addWatchTarget("fonts");
 
     const {
         DateTime
